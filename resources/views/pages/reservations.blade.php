@@ -10,6 +10,14 @@
         <h1>Get on the list!</h1>
             <form>
   <div class="form-group">
+    <label for="firstnameinput">First Name</label>
+    <input type="text" class="form-control" name="fname" id="firstnameinput" placeholder="John">
+  </div>
+  <div class="form-group">
+    <label for="lastnameinput">Last Name</label>
+    <input type="text" class="form-control" name="lname" id="lastnameinput" placeholder="Doe">
+  </div>
+  <div class="form-group">
     <label for="emailinput">Email address</label>
     <input type="email" class="form-control" name="email" id="emailinput" placeholder="name@example.com">
   </div>
