@@ -45,10 +45,20 @@
                 <p>Please enter your user information.</p>
             </div>
             <div class="card-body">
-               <div class="form-group">
-                                <input id="name" type="text" class="form-control form-control-lg" "@error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Name">
 
-                                @error('name')
+                <div class="form-group">
+                                <input id="fname" type="text" class="form-control form-control-lg" "@error('fname') is-invalid @enderror" name="fname" value="{{ old('fname') }}" required autocomplete="fname" autofocus placeholder="First Name">
+
+                                @error('fname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                </div>
+               <div class="form-group">
+                                <input id="lname" type="text" class="form-control form-control-lg" "@error('lname') is-invalid @enderror" name="lname" value="{{ old('lname') }}" required autocomplete="lname" autofocus placeholder="Last Name">
+
+                                @error('lname')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
