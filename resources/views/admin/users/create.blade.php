@@ -28,8 +28,8 @@
                 <!-- ============================================================== -->
                 <!-- end pageheader -->
                 <!-- ============================================================== -->
-             
-                    
+
+
                     <div class="row">
                         <!-- ============================================================== -->
                         <!-- basic form -->
@@ -51,7 +51,7 @@
                                                                 @enderror
                                                 </div>
                                                 <div class="form-group">
-                                                                
+
                                         </div>
                                         <div class="form-group">
                                             <label for="inputlastname">Last Name</label>
@@ -87,18 +87,17 @@
                                             <label for="inputpassword">Confirm Password</label>
                                             <input id="inputpassword" type="password" class="form-control form-control-lg" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm password">
                                 </div>
-                                        <form>
                                             <div class="form-group">
                                                 <label for="inputrole">Role</label>
                                                 <select name="role_id" class="form-control" id="inputrole">
                                                 @foreach ($roles as $role)
-                                                    <option value="{{$role->id}}" 
+                                                    <option value="{{$role->id}}"
                                                     @if ($role->title == 'Admin')
                                                             selected
                                                             @endif
                                                     selected>
                                                     {{$role->title}}</option>
-                                                        
+
                                                     @endforeach
                                                     {{-- <option value="1" selected>Admin</option>
                                                     <option value="2">Employee</option> --}}
@@ -108,7 +107,7 @@
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                             </div>
@@ -125,15 +124,15 @@
                         <!-- ============================================================== -->
                         <!-- end basic form -->
                         <!-- ============================================================== -->
-                    
-           
+
+
         </div>
             </div>
                         <!-- ============================================================== -->
                         <!-- end basic table -->
                         <!-- ============================================================== -->
                         <!-- ============================================================== -->
-    </div>                    
+    </div>
 @endsection
 
 
