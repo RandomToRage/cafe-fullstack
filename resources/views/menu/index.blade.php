@@ -73,7 +73,7 @@
                                   But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.
                                 </p>
                                 <div class="food-image">
-                                  <img src="https://www.jing.fm/clipimg/full/36-361034_black-clipart-coffee-transparent-background-coffee-cup-png.png">
+                                  <img src="img/black-coffee.png">
                                 </div>
                         </div>
                         
@@ -104,7 +104,7 @@
                                     But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.
                                   </p>
                                   <div class="food-image">
-                                    <img src="https://pngriver.com/wp-content/uploads/2018/04/Download-Iced-Tea-PNG-Transparent.png">
+                                    <img src="img/the-tea.png">
                                   </div>
                           </div>
                           
