@@ -43,7 +43,7 @@
                                         @method('PUT')
                                         <div class="form-group">
                                             <label for="inputtitle">Title</label>
-                                            <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('fname', $category->title) }}" required autocomplete="title" autofocus placeholder="Give Category A Title">
+                                            <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title', $category->title) }}" required autocomplete="title" autofocus placeholder="Give Category A Title">
 
                                                                 @error('title')
                                                                     <span class="invalid-feedback" role="alert">

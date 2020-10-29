@@ -38,24 +38,53 @@
                             <div class="card">
                                 <h5 class="card-header">Create New Category</h5>
                                 <div class="card-body">
-                                    <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                                    <form method="POST" action="/admin/food-categories">
+                                     @csrf
                                         <div class="form-group">
-                                            <label for="inputCategory">Category Name</label>
-                                            <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter Category Name" autocomplete="off" class="form-control">
+                                            <label for="inputtitle">Title</label>
+                                            <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title')}}" required autocomplete="title" autofocus placeholder="Give Category A Title">
+
+                                                                @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                </div>
+                                                <div class="form-group">
+                                                                
                                         </div>
+                                        <div class="form-group">
+                                            <label for="inputimageurl">Image Url</label>
+                                            <input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" required autocomplete="title" autofocus placeholder="Add url to the category image">
+
+                                                                @error('image_url')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                </div>
+                                                <div class="form-group">
+                                                                
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputdescription">Description</label>
+                                            <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write A Description">{{ old('description') }}</textarea>
+
+                                                    @error('description')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                            </div>
+                                        
+
+                                            
+
                                         <div class="row">
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                             </div>
-                                            <div class="col-sm-6 pl-0">
-                                                <p class="text-right">
-                                                    <button type="submit" class="btn btn-space btn-primary">Submit</button>
-                                                </p>
-                                            </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="inputCategoryImageUrl">Category Image Url/File upload</label>
-                                            <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://www.8bitcafe.com/img/coffee.jpg" autocomplete="off" class="form-control">
-                                        </div>
+                                        
                                         <div class="row">
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                             </div>
