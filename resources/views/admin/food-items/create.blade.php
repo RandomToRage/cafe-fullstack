@@ -38,23 +38,78 @@
                             <div class="card">
                                 <h5 class="card-header">Create New Item</h5>
                                 <div class="card-body">
-                                    <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                                    <form method="POST" action="/admin/food-items">
+                                     @csrf
                                         <div class="form-group">
-                                            <label for="inputItem">Item Name</label>
-                                            <input id="inputItem" type="text" name="title" data-parsley-trigger="change" required="" placeholder="Enter Item Name" autocomplete="off" class="form-control">
+                                            <label for="inputtitle">Title</label>
+                                            <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title')}}" required autocomplete="title" autofocus placeholder="Give item A Title">
+
+                                                                @error('title')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                </div>
+                                                <div class="form-group">
+                                                                
                                         </div>
                                         <div class="form-group">
-                                            <label for="inputItem">Price</label>
-                                            <input id="inputItem" type="text" name="price" data-parsley-trigger="change" required="" placeholder="Enter Item price" autocomplete="off" class="form-control">
+                                            <label for="inputprice">Price</label>
+                                            <input id="inputprice" type="integer" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price')}}" required autocomplete="price" autofocus placeholder="Give item A Price">
+
+                                                                @error('price')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                </div>
+                                                <div class="form-group">
+                                                                
                                         </div>
+                                        <div class="form-group">
+                                                <label for="inputcategory">Category</label>
+                                                <select name="category_id" class="form-control" id="inputcategory">
+                                                @foreach ($categories as $category)
+                                                    <option value="{{$category->id}}" 
+                                                            >{{$category->title}}</option>
+                                                        
+                                                    @endforeach
+                                                    {{-- <option value="1" selected>Admin</option>
+                                                    <option value="2">Employee</option> --}}
+                                                </select>
+                                            </div>
+                                        <div class="form-group">
+                                            <label for="inputimageurl">Image Url</label>
+                                            <input id="inputimageurl" type="text" class="form-control form-control-lg @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}" autocomplete="title" autofocus placeholder="Add url to the item image">
+
+                                                                @error('image_url')
+                                                                    <span class="invalid-feedback" role="alert">
+                                                                        <strong>{{ $message }}</strong>
+                                                                    </span>
+                                                                @enderror
+                                                </div>
+                                                <div class="form-group">
+                                                                
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputdescription">Description</label>
+                                            <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write A Description">{{ old('description') }}</textarea>
+
+                                                    @error('description')
+                                                        <span class="invalid-feedback" role="alert">
+                                                            <strong>{{ $message }}</strong>
+                                                        </span>
+                                                    @enderror
+                                            </div>
+                                        
+
+                                            
+
                                         <div class="row">
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="inputItemImageUrl">Category Image Url/File upload</label>
-                                            <input id="inputItemImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://www.8bitcafe.com/img/coffee.jpg" autocomplete="off" class="form-control">
-                                        </div>
+                                        
                                         <div class="row">
                                             <div class="col-sm-6 pb-2 pb-sm-4 pb-lg-0 pr-0">
                                             </div>
