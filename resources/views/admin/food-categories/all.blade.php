@@ -57,7 +57,7 @@
                                                 
                                                 <a href="#"
                                                 onclick="event.preventDefault();
-                                                document.getElementById('delete-user-{{$category->id}}').submit();">
+                                                document.getElementById('delete-category-{{$category->id}}').submit();">
                                                 <i class="far fa-trash-alt"></i>
                                                 </a>
 
@@ -65,7 +65,7 @@
                                                     {{ __('Logout') }}>
                                                 </a>
 
-                                                    <form id="delete-user-{{$category->id}}" action="/admin/food-categories/{{$category->id}}/delete" method="POST" style="display: none;">
+                                                    <form id="delete-category-{{$category->id}}" action="/admin/food-categories/{{$category->id}}/delete" method="POST" style="display: none;">
                                                     @method('DELETE')
                                                         @csrf
                                                     </form>

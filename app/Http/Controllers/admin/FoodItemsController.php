@@ -59,8 +59,7 @@ class FoodItemsController extends Controller
         request() -> validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image_url' => ['string'],
-            'price' => ['required', 'integer'],
+            'price' => ['required'],
             'category_id' => ['required', 'integer']
         ]);
 
@@ -71,6 +70,7 @@ class FoodItemsController extends Controller
         $item->price = request('price');
         $item->category_id = request('category_id');
         $item->save();
+        return redirect('/admin/food-items');
     }
     public function delete($id){
         $item = FoodItem::find($id);
