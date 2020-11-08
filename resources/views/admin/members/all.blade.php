@@ -41,19 +41,43 @@
                                                 <th scope="col">Full Name</th>
                                                 <th scope="col">Email</th>
                                                 <th scope="col">Phone Number</th>
-                                                <th scope="col">Date created</th>
+                                                <th scope="col">Date</th>
                                                 {{-- <th scope="col">Edit</th>
                                                 <th scope="col">Delete</th> --}}
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>Damien Davis</td>
-                                                <td>Damienjk@gmail.com</td>
-                                                <td>878-878-9898</td>
-                                                <td>2/2/2020</td>
+                                            @foreach ($members as $member)
+                                                <tr>
+                                                <th scope="row">{{$member->id}}</th>
+                                                <td>{{$member->fname}} {{$member->lname}}</td>
+                                                <td>{{$member->email}}</td>
+                                                <td>{{$member->phone_number}}</td>
+                                                <td>{{date('m/d/y', strtotime($member->updated_at))}}</td>
+                                                <td>
+                                                <a href="/admin/food-members/{{$member->id}}/edit"><i class="far fa-edit"></i></td>
+                                                <td>
+                                                {{-- <a href="/admin/users/{{$member->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this member?')) { return false; }"><i class="far fa-trash-alt"></i> --}}
+                                                
+                                                <a href="#"
+                                                onclick="event.preventDefault();
+                                                document.getElementById('delete-member-{{$member->id}}').submit();">
+                                                <i class="far fa-trash-alt"></i>
+                                                </a>
+
+                                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                                    {{ __('Logout') }}>
+                                                </a>
+
+                                                    <form id="delete-member-{{$member->id}}" action="/admin/food-members/{{$member->id}}/delete" method="POST" style="display: none;">
+                                                    @method('DELETE')
+                                                        @csrf
+                                                    </form>
+                                                
+                                                
+                                                </td>
                                             </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
