@@ -55,9 +55,7 @@
                                                 <td>{{$member->phone_number}}</td>
                                                 <td>{{date('m/d/y', strtotime($member->updated_at))}}</td>
                                                 <td>
-                                                <a href="/admin/food-members/{{$member->id}}/edit"><i class="far fa-edit"></i></td>
-                                                <td>
-                                                {{-- <a href="/admin/users/{{$member->id}}/delete" onclick="if (! confirm('Are you sure you want to delete this member?')) { return false; }"><i class="far fa-trash-alt"></i> --}}
+                                               
                                                 
                                                 <a href="#"
                                                 onclick="event.preventDefault();
@@ -69,7 +67,7 @@
                                                     {{ __('Logout') }}>
                                                 </a>
 
-                                                    <form id="delete-member-{{$member->id}}" action="/admin/food-members/{{$member->id}}/delete" method="POST" style="display: none;">
+                                                    <form id="delete-member-{{$member->id}}" action="/admin/members/{{$member->id}}/delete" method="POST" style="display: none;">
                                                     @method('DELETE')
                                                         @csrf
                                                     </form>
@@ -80,6 +78,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+                                    {{ $members->links() }}
                                 </div>
                             </div>
                         </div>
