@@ -82,3 +82,5 @@ Route::get('/admin/login', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//just wanted to make a faux commit to the hub.  delete me later pls :)
