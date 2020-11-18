@@ -7,8 +7,8 @@
     <div class="row">
         <div class="col-md-8 offset-md-2 thank-you">
 
-        <h1>Thank you for signing up to our mailing list.</h1>
-        <p>We will notify you with all special offers we have through email.</p>
+        <h1>Thank you!</h1>
+        <p>We will email you a confirmation.</p>
             
         </div>
             </div>
