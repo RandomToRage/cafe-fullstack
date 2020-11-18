@@ -53,8 +53,9 @@ Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete
 Route::get('/admin/members', 'admin\MemberController@index');
 Route::delete('/admin/members/{id}/delete', 'admin\MemberController@delete');
 //Admin Reservations
-Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
-Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+Route::get('/admin/reservations', 'admin\ReservationController@index');
+Route::post('/admin/reservations', 'admin\ReservationsController@store');
+Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationsController@delete');
 
 //Admin Users
 Route::get('/admin/users', 'admin\UsersController@index');
