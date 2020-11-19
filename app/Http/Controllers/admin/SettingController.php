@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\GeneralSetting;
 
 class SettingController extends Controller
 {
@@ -15,25 +16,37 @@ class SettingController extends Controller
         $this->middleware('auth');
     }
    
-    public function edit($id){
-        $category = FoodCategory::find($id);
-        return view('admin/food-categories/edit', [
-            'category' => $category
+    public function general(){
+        $id = 1;
+        $general_setting = GeneralSetting::find($id);
+        return view('/admin/settings/general', [
+            'general_setting' => $general_setting
         ]);
     }
-    public function update($id){
+    public function saveGeneral(){
+            $id = 1;
             request() -> validate([
-            'title' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'image_url' => ['required', 'string']
+            'site_title' => ['required', 'string', 'max:255'],
+            'logo_image_url' => ['required', 'string'],
+            'address_1' => ['required', 'string'],
+            'city' => ['required', 'string'],
+            'state' => ['required', 'string'],
+            'zip' => ['required', 'string'],
+            'phone_number' => ['required', 'string']
         ]);
 
-        $category = FoodCategory::find($id);
-        $category->title = request('title');
-        $category->description= request('description');
-        $category->image_url = request('image_url');
-        $category->save();
-        return redirect('/admin/food-categories');
+        $general_setting = GeneralSetting::find($id);
+        $general_setting->site_title = request('site_title');
+        $general_setting->logo_image_url= request('logo_image_url');
+        $general_setting->address_1 = request('address_1');
+        $general_setting->address_2= request('address_2');
+        $general_setting->city= request('city');
+        $general_setting->state= request('state');
+        $general_setting->zip= request('zip');
+        $general_setting->phone_number= request('phone_number');
+        $general_setting->save();
+
+        return redirect('/admin/settings/general');
     }
 
 }
