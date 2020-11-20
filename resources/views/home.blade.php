@@ -1,5 +1,9 @@
 @extends('layouts.landing-page')
 
+@section('title')
+{{$settings["general"]->site_title}} Get your Coffee Fix
+@endsection
+
 
 @section('content')
     <section id="information">

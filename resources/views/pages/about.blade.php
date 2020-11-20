@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('title')
+About - {{$settings["general"]->site_title}}
+@endsection
+
+@section('description')
+The best coffee that you can get and that there will ever be in fort worth texas.
+@endsection
+
 
 @section('content')
     <div id="about-page">
