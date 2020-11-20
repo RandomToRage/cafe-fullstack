@@ -5,12 +5,14 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\GeneralSetting;
+use App\SeoSetting;
+use App\SocialSetting;
 
 class SettingController extends Controller
 {
 
     
-
+// General Settings
     public function __construct()
     {
         $this->middleware('auth');
@@ -19,16 +21,17 @@ class SettingController extends Controller
     public function general(){
         $id = 1;
         $general_setting = GeneralSetting::find($id);
-        return view('/admin/settings/general', [
+        return view('admin/settings/general', [
             'general_setting' => $general_setting
         ]);
     }
     public function saveGeneral(){
             $id = 1;
             request() -> validate([
-            'site_title' => ['required', 'string', 'max:255'],
+            'site_title' => ['required', 'string'],
             'logo_image_url' => ['required', 'string'],
             'address_1' => ['required', 'string'],
+            'address_2' => ['string', 'nullable'],
             'city' => ['required', 'string'],
             'state' => ['required', 'string'],
             'zip' => ['required', 'string'],
@@ -48,5 +51,52 @@ class SettingController extends Controller
 
         return redirect('/admin/settings/general');
     }
+    //SEO settings
+    public function seo(){
+        $id = 1;
+        $seo_setting = SeoSetting::find($id);
+        return view('admin/settings/seo', [
+            'seo_setting' => $seo_setting
+        ]);
+    }
+    public function saveSeo(){
+            $id = 1;
+            request() -> validate([
+            'description' => ['required', 'string'],
+            'keywords' => ['required', 'string']
+        ]);
+
+        $seo_setting = SeoSetting::find($id);
+        $seo_setting->description = request('description');
+        $seo_setting->keywords= request('keywords');
+        $seo_setting->save();
+
+        return redirect('/admin/settings/seo');
+    }
+    //Social Settings
+    public function social(){
+        $id = 1;
+        $social_setting = SocialSetting::find($id);
+        return view('admin/settings/social', [
+            'social_setting' => $social_setting
+        ]);
+    }
+    public function saveSocial(){
+            $id = 1;
+            request() -> validate([
+            'facebook_url' => ['string'],
+            'instagram_url' => ['string'],
+            'twitter_url' => ['string']
+        ]);
+
+        $social_setting = SocialSetting::find($id);
+        $social_setting->facebook_url = request('facebook_url');
+        $social_setting->instagram_url = request('instagram_url');
+        $social_setting->twitter_url = request('twitter_url');
+        $social_setting->save();
+
+        return redirect('/admin/settings/social');
+    }
+    
 
 }
