@@ -15,11 +15,11 @@ class GeneralSettingSeeder extends Seeder
         DB::table('general_settings')->insert([
             'site_title' => '8-bit coffee',
             'logo_image_url' => '/img/logo.png',
-            'address_1' => '3121 hansell st',
+            'address_1' => '1311 W Magnolia Ave',
             'address_2' => '',
             'city' => 'Fort Worth',
             'state' => 'Texas',
-            'zip' => '76133',
+            'zip' => '76104',
             'phone_number' => '817-949-3636',
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
