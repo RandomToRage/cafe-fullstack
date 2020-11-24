@@ -31,6 +31,7 @@ Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 
 //Admin Dashboard
 Route::get('/admin', 'admin\AdminController@dashboard');
+Route::get('/admin/estimated-revenue-daily', 'admin\AdminController@DailyRevenueLast30');
 
 
 //Admin Food Categories
