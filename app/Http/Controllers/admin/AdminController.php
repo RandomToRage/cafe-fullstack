@@ -19,7 +19,7 @@ class AdminController extends Controller
         
         $estimated_income_last_30 = DB::select(DB::raw('
         SELECT 
-            (sum(guests_total) * 13) as total
+            (sum(guests_total) * 18) as total
         FROM cafe.reservations
         WHERE created_at BETWEEN CURDATE() - INTERVAL 30 DAY AND CURDATE()'));
 
@@ -44,13 +44,17 @@ class AdminController extends Controller
             inner join roles on roles.id = role_user.role_id
             where role_id = 2'));
 
+            $latestReservations = Reservation::where('guests_total', '>', 0) -> limit(5)-> orderBy('created_at', 'desc')-> get();
+            
+
 
 
         return view('admin/dashboard', [
             "estimated_income_last_30" => "$".$estimated_income_last_30[0]->total,
             "total_customers_last_30" => $total_customers_last_30[0]->total,
             "total_reservations_last_30" => $total_reservations_last_30[0]->total,
-            "total_employees_last_30" => $total_employees_last_30[0]->total
+            "total_employees_last_30" => $total_employees_last_30[0]->total,
+            "latestReservations" => $latestReservations
         ]);
     }
     public function dailyRevenueLast30(){
@@ -58,7 +62,7 @@ class AdminController extends Controller
         return $estimated_income_daily_data = DB::select(DB::raw('
         SELECT
             DATE_FORMAT(created_at,"%Y-%m-%d") as x,
-            (sum(guests_total)*14) as y
+            (sum(guests_total)*18) as y
             FROM cafe.reservations
             group by x desc;
             '));
