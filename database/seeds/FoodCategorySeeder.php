@@ -49,5 +49,12 @@ class FoodCategorySeeder extends Seeder
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
+        DB::table('food_categories')->insert([
+            'title' => 'candy',
+            'description' => 'ut I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.',
+            'image_url' => '/img/candy.png',
+            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()
+        ]);
     }
 }
