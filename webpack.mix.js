@@ -17,3 +17,4 @@ mix
     .browserSync({
         proxy: "localhost"
     });
+    

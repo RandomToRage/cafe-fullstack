@@ -29,6 +29,9 @@
 @media (min-width: 0px) and (max-width: 767px) {
    #contact-page{
        padding: 20px;
+       iframe{
+           width:100%;
+       }
    }
 }
 
