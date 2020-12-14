@@ -505,7 +505,7 @@ h2{
     }
     #food-preview{
         width: 100%;
-        overflow: hidden;
+        overflow: auto;
         padding: 20px;
         .button-rounded{
             margin-bottom: 2rem;
@@ -533,6 +533,42 @@ h2{
             }
         }
     }
+    #app-layout{
+        overflow:hidden;
+    }
+    #menu-page{
+        #food-preview{
+            width: 100%;
+            // overflow: hidden;
+            padding: 20px;
+            .button-rounded{
+                margin-bottom: 2rem;
+            }
+            .container{
+                .left-btn{
+                    left: -20px;
+                }
+                .right-btn{
+                    right: -20px;
+                }
+                .food-slider{
+                    .sliding-system{
+                        transform: translate3d(-100%, 0, 0);
+                    }
+                } 
+            }
+            h2{
+                font-size: 1.8rem;
+                line-height: 1.2;
+            }
+            .food-slider{
+                .slide{
+                    width: 50%;
+                }
+            }
+        }
+    }
+    
 
 }
 .content-box{
@@ -542,11 +578,9 @@ h2{
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) and (max-width: 1199) {
-
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
 
 }

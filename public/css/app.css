@@ -1026,7 +1026,7 @@ h2 {
 
   #food-preview {
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     padding: 20px;
   }
 
@@ -1053,6 +1053,40 @@ h2 {
 
   #food-preview .food-slider .slide {
     width: 100%;
+  }
+
+  #app-layout {
+    overflow: hidden;
+  }
+
+  #menu-page #food-preview {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #menu-page #food-preview .button-rounded {
+    margin-bottom: 2rem;
+  }
+
+  #menu-page #food-preview .container .left-btn {
+    left: -20px;
+  }
+
+  #menu-page #food-preview .container .right-btn {
+    right: -20px;
+  }
+
+  #menu-page #food-preview .container .food-slider .sliding-system {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  #menu-page #food-preview h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  #menu-page #food-preview .food-slider .slide {
+    width: 50%;
   }
 }
 
