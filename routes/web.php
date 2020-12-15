@@ -112,3 +112,7 @@ View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/r
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
