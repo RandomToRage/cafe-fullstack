@@ -70,7 +70,7 @@
 <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
     
    <script>
-        let slides = $('.sliding-system a.slide').length;
+        let slides = $('.sliding-system b.slide').length;
         let maxSlides;
         let moveTotal;
         let currentSlide = 0;
