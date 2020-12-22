@@ -28,7 +28,9 @@
     </section>
     <section id="food-preview">
       <h2>We have all the caffine you need!</h2>
+      <a href="/menu">
       <div class="button-rounded">View Our Menu</div>
+      </a>
       <div class="container">
           <div class="left-btn">
               <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -66,8 +68,8 @@
 @endsection
 
 <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-
-    <script>
+    
+   <script>
         let slides = $('.sliding-system a.slide').length;
         let maxSlides;
         let moveTotal;
