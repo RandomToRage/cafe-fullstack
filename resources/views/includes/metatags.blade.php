@@ -8,11 +8,11 @@
         <meta name="robots" content="follow,index,max-snippet:-1,max-video-preview:-1,max-image-preview:large">
         {{-- <link rel="canonical" href="https://codingphase.com/"> --}}
         <meta property="og:locale" content="en_US">
-        <meta property="og:type" content='{{$settings["general"]->site_title}}'>
+        <meta property="og:type" content='{{$setting["general"]->site_title}}'>
         <meta property="og:title" content="8-bit coffee shop">
         <meta property="og:description"
           content="@yield('description')">
-        <meta property="og:site_name" content='{{$settings["general"]->site_title}}'>
+        <meta property="og:site_name" content='{{$setting["general"]->site_title}}'>
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="@yield('title')">
         <meta name="twitter:description"
