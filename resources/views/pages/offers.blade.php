@@ -3,6 +3,9 @@
 @section('title')
 Offers - {{$settings["general"]->site_title}}
 @endsection
+@section('description')
+The best offers for our food and coffee!
+@endsection
 
 
 @section('content')

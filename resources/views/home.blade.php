@@ -4,6 +4,10 @@
 {{$settings["general"]->site_title}} Get your Coffee Fix
 @endsection
 
+@section('description')
+8-bit-coffee  The best coffee near you.
+@endsection
+
 
 @section('content')
     <section id="information">

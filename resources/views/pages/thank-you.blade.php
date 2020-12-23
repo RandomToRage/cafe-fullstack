@@ -4,6 +4,10 @@
 Thank you - {{$settings["general"]->site_title}}
 @endsection
 
+@section('description')
+Thank you for signing up!
+@endsection
+
 
 @section('content')
     <div id="offers-page">

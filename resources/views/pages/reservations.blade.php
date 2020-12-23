@@ -4,6 +4,10 @@
 Reservations - {{$settings["general"]->site_title}}
 @endsection
 
+@section('description')
+Reserve a table in advance.
+@endsection
+
 
 @section('content')
     <div id="waitlist-page">
