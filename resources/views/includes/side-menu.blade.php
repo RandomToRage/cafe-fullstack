@@ -1,5 +1,5 @@
 <div class="side-menu">
-        <a href="/" class="logo">
+        <a href="/home" class="logo">
             <img src="{{$settings["general"]->logo_image_url}}">
         </a>
         <div class="menu">
