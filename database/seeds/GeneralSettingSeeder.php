@@ -14,7 +14,7 @@ class GeneralSettingSeeder extends Seeder
     {
         DB::table('general_settings')->insert([
             'site_title' => '8-bit coffee',
-            'logo_image_url' => '/img/logo.png',
+            'logo_image_url' => 'public/img/logo.png',
             'address_1' => '1311 W Magnolia Ave',
             'address_2' => '',
             'city' => 'Fort Worth',
