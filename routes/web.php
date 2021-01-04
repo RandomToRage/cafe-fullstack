@@ -116,3 +116,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+// its ya boi leaving you a message.  watch this part of joe's video @43:54 maybe make changes to your web routes to fix the issue you are having.  Thank in advance.
