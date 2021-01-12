@@ -19,7 +19,7 @@ use App\SeoSetting;
 // Static Pages
 Route::get('/', 'StaticPagesController@home');
 Route::get('/menu', 'StaticPagesController@menu');
-Route::get('/menu/{espresso}', 'StaticPagesController@singleMenu');
+Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
 Route::get('/about', 'StaticPagesController@about');
 Route::get('/reservations', 'StaticPagesController@reservations');
 Route::post('/reservations', 'StaticPagesController@saveReservation');

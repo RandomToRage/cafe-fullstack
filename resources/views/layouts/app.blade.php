@@ -17,7 +17,7 @@
     </section>
     <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
 
-    <script>
+    {{-- <script>
         let slides = $('.sliding-system a.slide').length;
         let maxSlides;
         let moveTotal;
@@ -81,5 +81,5 @@
         tabletSlider(b)
         b.addListener(tabletSlider);
     </script>
-    </body>
+    </body> --}}
 </html>

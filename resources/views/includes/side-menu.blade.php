@@ -36,7 +36,7 @@
               {{$settings["general"]->city}} {{$settings["general"]->state}} {{$settings["general"]->zip}}
           </div>
           <div class="phone-number">
-            <a href="{{$settings["general"]->phone_number}}">({{$settings["general"]->phone_number}}</a>
+            <a href="{{$settings["general"]->phone_number}}">{{$settings["general"]->phone_number}}</a>
           </div>
         </div>
       </div>
