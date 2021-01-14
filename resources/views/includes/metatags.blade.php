@@ -6,7 +6,6 @@
         <meta name="description"
           content="@yield('description')">
         <meta name="robots" content="follow,index,max-snippet:-1,max-video-preview:-1,max-image-preview:large">
-        {{-- <link rel="canonical" href="https://codingphase.com/"> --}}
         <meta property="og:locale" content="en_US">
         <meta property="og:type" content="@yield('title')">
         <meta property="og:title" content="8-bit coffee shop">
