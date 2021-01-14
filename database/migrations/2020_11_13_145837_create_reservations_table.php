@@ -11,7 +11,7 @@ class CreateReservationsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function down()
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
