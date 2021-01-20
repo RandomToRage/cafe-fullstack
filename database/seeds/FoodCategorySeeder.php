@@ -15,7 +15,7 @@ class FoodCategorySeeder extends Seeder
         DB::table('food_categories')->insert([
             'title' => 'espresso',
             'description' => 'ut I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account.',
-            'image_url' => 'https://i.ya-webdesign.com/images/cup-transparent-espresso-4.webp',
+            'image_url' => '/img/espresso.png',
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
