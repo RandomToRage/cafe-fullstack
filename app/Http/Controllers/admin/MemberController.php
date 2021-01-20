@@ -9,12 +9,12 @@ use App\Member;
 class MemberController extends Controller
 {
     
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index(){
-       $members = member::paginate(10);
+       $members = member::simplePaginate(10);
 
         return view('admin/members/all',[
             'members' => $members
