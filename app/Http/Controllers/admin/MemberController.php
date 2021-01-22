@@ -14,7 +14,7 @@ class MemberController extends Controller
         $this->middleware('auth');
     }
     public function index(){
-       $members = member::simplePaginate(10);
+       $members = member::paginate(10);
 
         return view('admin/members/all',[
             'members' => $members

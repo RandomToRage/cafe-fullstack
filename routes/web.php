@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\GeneralSetting;
 use App\SocialSetting;
 use App\SeoSetting;
+use App\Members;
 
 /*
 |--------------------------------------------------------------------------

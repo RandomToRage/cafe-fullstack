@@ -7,6 +7,7 @@ use App\Member;
 use App\Reservation;
 use App\FoodCategory;
 use App\FoodItem;
+use App\Members;
 
 
 
